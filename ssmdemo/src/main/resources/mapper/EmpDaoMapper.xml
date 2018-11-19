@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjq.ssm.dao.EmpDao">
+<!--分页查询-->
+<select id="getPage" resultType="map">
+        select * from
+        (select rownum rn , t.* from emp t where rownum &lt; #{end}) a
+        where a.rn &gt; #{start}
+    </select>
+<select id="getPageCount" resultType="int">
+        select count(*) from emp
+    </select>
+<insert id="add" parameterType="map">
+        insert into emp(EMPNO,ENAME,JOB,SAL) values(#{EMPNO},#{ENAME},#{JOB},#{SAL})
+    </insert>
+<select id="selectById" parameterType="int" resultType="map">
+        select * from emp where empno = #{EMPNO}
+    </select>
+<update id="update" parameterType="map">
+        update emp set ename = #{ENAME} , job = #{JOB} ,sal = #{SAL} where empno = #{EMPNO}
+    </update>
+<delete id="delete" parameterType="int">
+        delete from emp where empno = #{EMPNO}
+    </delete>
+    <insert id="add">
+        <selectKey keyProperty="empNo" order="BEFORE" resultType="int">
+            select seq_emp_id.nextval from dual
+        </selectKey>
+        insert into emp(empno,ename) values (#{empNo},#{ename})
+    </insert>
+</mapper>
