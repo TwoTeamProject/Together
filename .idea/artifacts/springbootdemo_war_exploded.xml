@@ -7,6 +7,9 @@
           <element id="module-output" name="springbootdemo" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="springbootdemo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="springbootdemo" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.0.4.RELEASE" />
@@ -60,9 +63,6 @@
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.9" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.4.RELEASE" />
-          <element id="archive" name="springbootdemo-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="springbootdemo" />
-          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
