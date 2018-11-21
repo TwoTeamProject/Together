@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
     /*Ryb修改*/
     /*凡哥第一次修改*/
     /*孙家庆修改*/
+    /*管辉的修改*/
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
